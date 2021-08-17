@@ -66,7 +66,13 @@ table tr td {
 .btndanger:hover {
   background-color: #ff4757;
 }
-
+/* CSS for messages */
+.success {
+  color: #2ed573;
+}
+.error {
+  color: #ff4757;
+}
 /* CSS for menu */
 .menu {
   border-bottom: 1px solid black;
