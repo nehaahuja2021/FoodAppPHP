@@ -82,7 +82,7 @@ if($res==TRUE)
 //echo"data inserted";
 
 //create session variable to display message
-$_SESSION['add']="Admin added successfully";
+$_SESSION['add']="<div class='success'>Admin added successfully</div>";
 
 //redirect
 header("location:".SITEURL.'admin/manage-admin.php');
@@ -90,7 +90,7 @@ header("location:".SITEURL.'admin/manage-admin.php');
 else{
    //echo"data not inserted";
 
-   $_SESSION['add']="Failed to add Admin";
+   $_SESSION['add']="<div class='error'> Failed to add Admin </div>";
 
 //redirect
 header("location:".SITEURL.'admin/add-admin.php');

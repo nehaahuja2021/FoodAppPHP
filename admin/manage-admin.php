@@ -15,6 +15,19 @@ if (isset($_SESSION['add']))
      echo $_SESSION['add'];//displying message
      unset($_SESSION['add']) ;// removing session message
 }
+if (isset($_SESSION['delete']))
+{
+     echo $_SESSION['delete'];//displying message
+     unset($_SESSION['delete']) ;// removing session message
+}
+if (isset($_SESSION['update']))
+{
+     echo $_SESSION['update'];//displying message
+     unset($_SESSION['update']) ;// removing session message
+}
+
+
+
 ?>
 <br>
 <br>
@@ -56,8 +69,8 @@ if($res==TRUE)
 <td>  <?php echo $id?> </td>
 <td><?php echo $full_name?>  </td>
 <td> <?php echo $username?>   </td>
-<td> <a href="#" class="btnsecondary">Update admin </a>
-     <a href="#" class="btndanger">Delete Admin  </a>
+<td> <a href="<?php echo SITEURL; ?>admin/update-admin.php?id=<?php echo $id;?>" class="btnsecondary">Update admin </a>
+     <a href="<?php echo SITEURL; ?>admin/delete-admin.php?id=<?php echo $id;?>" class="btndanger">Delete Admin  </a>
      
 </td>
 </tr>
