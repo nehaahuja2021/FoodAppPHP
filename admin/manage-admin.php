@@ -25,8 +25,22 @@ if (isset($_SESSION['update']))
      echo $_SESSION['update'];//displying message
      unset($_SESSION['update']) ;// removing session message
 }
+if (isset($_SESSION['user_not_found']))
+{
+     echo $_SESSION['user_not_found'];//displying message
+     unset($_SESSION['user_not_found']) ;// removing session message
+}
+if (isset($_SESSION['passwords-not-match']))
+{
+     echo $_SESSION['passwords-not-match'];//displying message
+     unset($_SESSION['passwords-not-match']) ;// removing session message
+}
 
-
+if (isset($_SESSION['change-password']))
+{
+     echo $_SESSION['change-password'];//displying message
+     unset($_SESSION['change-password']) ;// removing session message
+}
 
 ?>
 <br>
@@ -69,7 +83,9 @@ if($res==TRUE)
 <td>  <?php echo $id?> </td>
 <td><?php echo $full_name?>  </td>
 <td> <?php echo $username?>   </td>
-<td> <a href="<?php echo SITEURL; ?>admin/update-admin.php?id=<?php echo $id;?>" class="btnsecondary">Update admin </a>
+<td> 
+     <a href="<?php echo SITEURL; ?>admin/update-password.php?id=<?php echo $id;?>" class="btnprimary"> Change Password </a>
+     <a href="<?php echo SITEURL; ?>admin/update-admin.php?id=<?php echo $id;?>" class="btnsecondary">Update admin </a>
      <a href="<?php echo SITEURL; ?>admin/delete-admin.php?id=<?php echo $id;?>" class="btndanger">Delete Admin  </a>
      
 </td>
