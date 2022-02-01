@@ -64,7 +64,7 @@ if($count==1)
 //echo"user found";
 //check password match or not
 
-if($new_password==$current_password)
+if($new_password==$confirm_password)
 {
    //update password //echo password match
 $sql2="UPDATE tbl_admin SET password='$new_password' where id=$id";
