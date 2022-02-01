@@ -69,6 +69,7 @@ if($res==TRUE)
 
      if($count>0)
      {
+          $sn=1;
           //we have data in db
           while($rows=mysqli_fetch_assoc($res))
           {
@@ -80,7 +81,7 @@ if($res==TRUE)
                ?>
 
 <tr>
-<td>  <?php echo $id?> </td>
+<td>  <?php echo $sn++?> </td>
 <td><?php echo $full_name?>  </td>
 <td> <?php echo $username?>   </td>
 <td> 
